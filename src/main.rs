@@ -172,6 +172,7 @@ fn get_boot_targets() -> BootTargets {
 
 fn set_next_boot(target: &BootTarget) -> Result<ExitStatus> {
     Command::new("efibootmgr")
+        .arg("--quiet")
         .arg("--bootnext")
         .arg(format!("{:0>4}", target.id))
         .status()
