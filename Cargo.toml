@@ -1,0 +1,9 @@
+[package]
+name = "reboot-to"
+version = "0.1.1"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.13", features = ["derive", "unicode"] }
+ratatui = { version = "0.27.0", features = ["all-widgets"] }
+regex = "1.10.6"
